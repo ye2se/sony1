@@ -1,0 +1,112 @@
+.inner {
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #111;
+}
+
+.header .inner {
+    position: relative;
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+
+.header .inner .gnb {
+    display: none;
+}
+
+.mopen {
+    display: block;
+
+    position: absolute;
+    top: 24px;
+    left: 0px;
+    z-index: 1000;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 0;
+}
+
+.mopen::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    right: 8px;
+
+    height: 2px;
+
+    background: #fff;
+}
+
+.mopen.on::before {
+    opacity: 0;
+}
+
+.mopen::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 8px;
+    right: 8px;
+
+    height: 2px;
+
+    background: #fff;
+
+}
+
+.mopen.on::after {
+    opacity: 0;
+}
+
+.mopen button {
+    border: none;
+    background: transparent;
+}
+
+.mopen button::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    right: 8px;
+
+    height: 2px;
+
+    background: #fff;
+}
+
+.mopen.on button::before {
+    transform: rotate(45deg);
+}
+
+.mopen button::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    right: 8px;
+
+    height: 2px;
+
+    background: #fff;
+}
+
+.mopen.on button::after {
+    transform: rotate(-45deg);
+}
+
+.header .inner h1 {
+    margin: 0 auto;
+}
+
+.header .inner .utils {
+    display: flex;
+    gap: 16px;
+}
